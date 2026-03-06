@@ -89,9 +89,11 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
+      {/* Why Choose Us Section with Map */}
       <section className="why-us">
         <h2 className="section-title white-title">WHY TRUST TEST WEBSITE?</h2>
+        
+        {/* Features Grid */}
         <div className="features-grid">
           <div className="feature">
             <h3>👨‍🔧 Skilled Technicians</h3>
@@ -110,9 +112,53 @@ function HomePage() {
             <p>Most brake jobs completed same-day while you wait.</p>
           </div>
         </div>
+
+        {/* Location Section with Map and Address */}
+        <div className="location-section">
+          <h3 className="location-title">WHERE TO FIND US</h3>
+          <div className="location-container">
+            <div className="map-column">
+              <div className="map-container">
+                <iframe 
+                  title="Google Map Location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343004!2d-73.98510768458434!3d40.74875897932729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1644262073400!5m2!1sen!2sus"
+                  width="100%"
+                  height="250"
+                  style={{ border: 0, borderRadius: '10px' }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+            <div className="address-column">
+              <div className="address-card">
+                <h4>📍 Our Location</h4>
+                <p className="address-line">350 5th Avenue</p>
+                <p className="address-line">Suite 100</p>
+                <p className="address-line">New York, NY 10118</p>
+                <p className="address-line">United States</p>
+                
+                <div className="address-details">
+                  <p><strong>📞 Phone:</strong> (555) 123-4567</p>
+                  <p><strong>✉️ Email:</strong> info@testwebsite.com</p>
+                </div>
+                
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=350+5th+Ave+New+York+NY+10118" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="directions-btn"
+                >
+                  Get Directions →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
-      {/* Footer with Contact Info and Google Map */}
+      {/* Footer with Contact Info */}
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-section">
@@ -127,28 +173,17 @@ function HomePage() {
           </div>
           
           <div className="footer-section">
-            <h3>WHERE TO FIND US</h3>
-            <div className="map-container">
-              <iframe 
-                title="Google Map Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343004!2d-73.98510768458434!3d40.74875897932729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1644262073400!5m2!1sen!2sus"
-                width="100%"
-                height="200"
-                style={{ border: 0, borderRadius: '10px' }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-            <p className="map-address">📍 350 5th Ave, New York, NY 10118</p>
-            <p className="map-note">Click map to open in Google Maps</p>
-          </div>
-          
-          <div className="footer-section">
             <h3>HOURS</h3>
             <p>Mon-Fri: 8:00 AM - 6:00 PM</p>
             <p>Saturday: 9:00 AM - 3:00 PM</p>
             <p>Sunday: Closed</p>
+          </div>
+
+          <div className="footer-section">
+            <h3>QUICK LINKS</h3>
+            <p>Privacy Policy</p>
+            <p>Terms of Service</p>
+            <p>Careers</p>
           </div>
         </div>
         

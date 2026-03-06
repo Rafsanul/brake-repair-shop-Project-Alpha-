@@ -182,7 +182,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 0 auto 60px;
   text-align: center;
 }
 
@@ -197,6 +197,122 @@ body {
   line-height: 1.6;
 }
 
+/* Location Section */
+.location-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 40px;
+  border-top: 1px solid #444;
+}
+
+.location-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #e63946;
+  position: relative;
+}
+
+.location-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #e63946;
+}
+
+.location-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Map Column */
+.map-column {
+  width: 100%;
+}
+
+.map-container {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.map-container:hover {
+  transform: scale(1.02);
+}
+
+/* Address Column */
+.address-column {
+  width: 100%;
+}
+
+.address-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #444;
+  backdrop-filter: blur(10px);
+}
+
+.address-card h4 {
+  color: #e63946;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e63946;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.address-line {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.address-details {
+  margin: 25px 0;
+  padding: 15px 0;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+}
+
+.address-details p {
+  color: #ccc;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.address-details strong {
+  color: #e63946;
+  margin-right: 10px;
+}
+
+.directions-btn {
+  display: inline-block;
+  background-color: #e63946;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.directions-btn:hover {
+  background-color: #c92a36;
+  transform: translateX(5px);
+}
+
 /* Footer */
 .footer {
   background-color: #111;
@@ -206,7 +322,7 @@ body {
 
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
@@ -223,31 +339,6 @@ body {
   color: #aaa;
   margin-bottom: 0.5rem;
   line-height: 1.6;
-}
-
-/* Map Styles */
-.map-container {
-  margin-bottom: 15px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-}
-
-.map-container:hover {
-  transform: scale(1.02);
-}
-
-.map-address {
-  font-weight: 500;
-  color: #e63946 !important;
-  margin-top: 10px;
-}
-
-.map-note {
-  font-size: 0.85rem;
-  color: #888 !important;
-  font-style: italic;
 }
 
 .footer-bottom {
@@ -276,13 +367,18 @@ body {
     grid-template-columns: 1fr;
   }
   
-  .footer-content {
+  .location-container {
     grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .address-card {
     text-align: center;
   }
   
-  .map-container {
-    max-width: 100%;
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 }
 
@@ -298,5 +394,17 @@ body {
   
   .service-card {
     padding: 20px;
+  }
+  
+  .location-title {
+    font-size: 1.5rem;
+  }
+  
+  .address-card {
+    padding: 20px;
+  }
+  
+  .address-line {
+    font-size: 1rem;
   }
 }
